@@ -18,7 +18,7 @@ pip install pygame numba numpy
 
 # Uso
 
-    Para iniciar o programa Sort Visualizer, basta executar o arquivo 'main.py' usando o Python.
+> Para iniciar o programa Sort Visualizer, basta executar o arquivo 'main.py' usando o Python.
 
 O programa inclui as seguintes funcionalidades:
 
