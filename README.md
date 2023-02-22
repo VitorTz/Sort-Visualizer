@@ -32,7 +32,7 @@ Para iniciar o programa, execute o arquivo `main.py`. Uma janela do Pygame será
 
 O programa tem as seguintes funcionalidades:
 
-- Pressionar as teclas numéricas de 1 a 9 para selecionar o algoritmo de ordenação correspondente.
+- Pressionar as teclas numéricas de `1 a 9` para selecionar o algoritmo de ordenação correspondente.
 - Pressionar a tecla `Space` para reiniciar o processo de ordenação com uma nova lista de números aleatórios.
 - Fechar a janela do Pygame para encerrar o programa.
 
