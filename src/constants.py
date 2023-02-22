@@ -1,59 +1,48 @@
 from src.colors import Colors
-from pygame import K_SPACE, K_0, K_1, K_2, K_3, K_4, K_5, K_6, K_7, K_8, K_9
 from pathlib import Path
+import pygame
+
 
 
 class Constants:
+
 
     # window
     window_width = 1280
     window_height = 720
     window_size = (window_width, window_height)
-    window_bg_color = Colors.grey
     window_title = "Sort Visualizer"
+    window_bg_color = Colors.grey
 
-    # array bar
+    # bar
     bar_color = Colors.blue
     bar_width = 1
 
-    # array
-    array_size = window_width // bar_width
-
-    # keyboard
-    reset_key = K_SPACE
-    digit_keys = [K_1, K_2, K_3, K_4, K_5, K_6, K_7, K_8, K_9]
-    digits: dict[int, int] = {
-        x+1: i for i, x in enumerate(digit_keys)
+    # keys
+    reset_key: int = pygame.K_r
+    pause_continue_key: int = pygame.K_SPACE
+    sort_name_by_key: dict[int, str] = {
+        pygame.K_1: "merge_sort",
+        pygame.K_2: "quick_sort",
+        pygame.K_3: "bubble_sort",
+        pygame.K_4: "selection_sort",
+        pygame.K_5: "insertion_sort",
+        pygame.K_6: "counting_sort",
+        pygame.K_7: "heap_sort",
+        pygame.K_8: "shell_sort",
+        pygame.K_9: "cocktail_sort"
     }
 
-    # font
-    font = Path("res/SourceCodePro-Semibold.otf")
-    font_size = 16
-    font_color = Colors.white
-
-    # menu imgs
-    menu_img_by_sort_method: dict[str, Path] = {
-        "merge_sort": Path("res/menu/menu_merge.png"),
-        "quick_sort": Path("res/menu/menu_quick.png"),
-        "bubble_sort": Path("res/menu/menu_bubble.png"),
-        "selection_sort": Path("res/menu/menu_selection.png"),
-        "insertion_sort": Path("res/menu/menu_insertion.png"),
-        "heap_sort": Path("res/menu/menu_heap.png"),
-        "counting_srt": Path("res/menu/menu_counting.png"),
-        "radix_sort": Path("res/menu/menu_radix.png"),
-        "bucket_sort": Path("res/menu/menu_bucket.png")
+    menu_img_by_sort_name: dict[str, Path] = {
+        "merge_sort": Path("res/menu/merge_sort.png"),
+        "quick_sort": Path("res/menu/quick_sort.png"),
+        "bubble_sort": Path("res/menu/bubble_sort.png"),
+        "selection_sort": Path("res/menu/selection_sort.png"),
+        "insertion_sort": Path("res/menu/insertion_sort.png"),
+        "heap_sort": Path("res/menu/heap_sort.png"),
+        "counting_sort": Path("res/menu/counting_sort.png"),
+        "shell_sort": Path("res/menu/shell_sort.png"),
+        "cocktail_sort": Path("res/menu/cocktail_sort.png")
     }
 
-    method_name_by_number: dict[int, str] = { 
-        1: "merge_sort",
-        2: "quick_sort",
-        3: "bubble_sort",
-        4: "selection_sort",
-        5: "insertion_sort",
-        6: "heap_sort",
-        7: "counting_sort",
-        8: "radix_sort",
-        9: "bucket_sort"
-    }
-
-    menu_pos = (20, 20)
+    menu_img_pos = [10, 10]

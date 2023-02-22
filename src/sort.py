@@ -2,8 +2,7 @@ from src.globals import Globals
 
 
 def wait() -> None:
-    Globals.clock.tick(Globals.frame_rate)
-    Globals.frame_count += 1
+    Globals.clock.tick(Globals.sorting_frame_rate)
 
 
 def quick_sort(arr: list[int]) -> None:
